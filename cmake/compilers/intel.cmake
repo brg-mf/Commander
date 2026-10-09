@@ -67,7 +67,7 @@
 if (COMMANDER3_Fortran_COMPILER_FLAGS_RELEASE MATCHES "")
 	list(APPEND COMMANDER3_Fortran_COMPILER_FLAGS_RELEASE 
 		"-O3"
-		"-xHost" 
+		"-march=x86-64-v3" 
 		"-fpe0"
 		"-fPIC"
 		"-traceback" 
@@ -80,7 +80,7 @@ if(COMMANDER3_Fortran_COMPILER_FLAGS_DEBUG MATCHES "")
 	list(APPEND COMMANDER3_Fortran_COMPILER_FLAGS_DEBUG 
 		"-O0"  
     "-g" 
-		"-xHost" 
+		"-march=x86-64-v3" 
     "-debug" "all"
     "-check" "all,nouninit"
     "-warn" "all,nounused,noexternal"
@@ -97,7 +97,7 @@ endif()
 if(COMMANDER3_Fortran_COMPILER_FLAGS_RELWITHDEBINFO MATCHES "")
 	list(APPEND COMMANDER3_Fortran_COMPILER_FLAGS_RELWITHDEBINFO 
 		"-O2"
-		"-xHost" 
+		"-march=x86-64-v3" 
 		"-g" 
 		"-fpe0"
 		"-fPIC"
