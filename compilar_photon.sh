@@ -1,13 +1,6 @@
 #!/bin/bash
 # ---- Compilación de Commander3 en PhotonCluster ---- #
-# Este script debe ejecutarse desde Photon11 y es muy recomendable hacerlo 
-# dentro de una terminal tmux:
-#   tmux new -s commander
 #
-# Esto solo protege contra cortes. La compilación tarda bastante, y si se 
-# cae la conexión SSH o cierras la terminal, sin tmux se interrumpe y habría 
-# que empezar de nuevo, con una ruta de instalación distinta, porque el script 
-# no deja reutilizar una carpeta que no esté vacía.
 # Compila e instala Commander3 desde este repositorio con Intel oneAPI,
 # para -march=x86-64-v3 (nivel común de todos los workers).
 #
@@ -15,7 +8,7 @@
 #   ./compilar_photon.sh <ruta_de_instalacion>
 #
 # Ejemplos:
-#   ./compilar_photon.sh /cosmotools/commander3/$(date +%F)       # versión común (gestor/a)
+#   ./compilar_photon.sh /cosmotools/commander3/2026-10-08        # versión común (gestora)
 #   ./compilar_photon.sh ~/software/commander3/mi-rama            # versión personal
 #
 # Variables opcionales:
