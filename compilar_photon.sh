@@ -1,5 +1,13 @@
 #!/bin/bash
 # ---- Compilación de Commander3 en PhotonCluster ---- #
+# Este script debe ejecutarse obligatoriamente desde photon11. Además,
+# se recomienda ejecutarlo desde una terminal tmux, para evitar compilaciones
+# incompletas o corruptas como consecuencia de problemas en la conexión.
+#  
+#   tmux new -s <nombre de la sesión> 
+#
+# Ejemplo:
+#   tmux new -s commander 
 #
 # Compila e instala Commander3 desde este repositorio con Intel oneAPI,
 # para -march=x86-64-v3 (nivel común de todos los workers).
