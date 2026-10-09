@@ -8,7 +8,7 @@
 #   ./compilar_photon.sh <ruta_de_instalacion>
 #
 # Ejemplos:
-#   ./compilar_photon.sh /cosmotools/commander3/2026-10-08        # versión común (gestora)
+#   ./compilar_photon.sh /cosmotools/commander3/$(date +%F)       # versión común (gestora)
 #   ./compilar_photon.sh ~/software/commander3/mi-rama            # versión personal
 #
 # Variables opcionales:
@@ -17,6 +17,17 @@
 # La carpeta de compilación (ficheros intermedios y logs) va a ~/build/ y se
 # puede borrar al terminar. Al instalar se deja un fichero COMMIT con el commit
 # y la rama compilados.
+#
+# Una vez se termine de compilar la versión común, el gestor debe publicarla
+# (<fecha> es la que indica "Commander3 instalado en ..."):
+#   cd /cosmotools/commander3
+#   ln -sfn <fecha> actual
+#   ls -l                                   # debe mostrar "actual -> <fecha>"
+#
+# Y comprobar que funciona:
+#   module purge
+#   module load commander3/Commander
+#   which commander3                        # /cosmotools/commander3/actual/bin/commander3
 # ------------------------------------------------------- #
 
 set -eo pipefail
